@@ -69,6 +69,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "upgrade_solver_proto_text",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyCaffeSample", "MyCaffeSample\MyCaffeSample.vcxproj", "{E200AC4A-3FC6-4D0A-B6D0-ADD9CBAC166C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyCaffeSample2", "MyCaffeSample2\MyCaffeSample2.vcxproj", "{C5AD4809-FAB5-49CA-BCD7-BE523EC2F8A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -239,6 +241,16 @@ Global
 		{E200AC4A-3FC6-4D0A-B6D0-ADD9CBAC166C}.Release|Win32.ActiveCfg = Release|x64
 		{E200AC4A-3FC6-4D0A-B6D0-ADD9CBAC166C}.Release|x64.ActiveCfg = Release|x64
 		{E200AC4A-3FC6-4D0A-B6D0-ADD9CBAC166C}.Release|x64.Build.0 = Release|x64
+		{C5AD4809-FAB5-49CA-BCD7-BE523EC2F8A7}.Debug|Mixed Platforms.ActiveCfg = Debug|x64
+		{C5AD4809-FAB5-49CA-BCD7-BE523EC2F8A7}.Debug|Mixed Platforms.Build.0 = Debug|x64
+		{C5AD4809-FAB5-49CA-BCD7-BE523EC2F8A7}.Debug|Win32.ActiveCfg = Debug|x64
+		{C5AD4809-FAB5-49CA-BCD7-BE523EC2F8A7}.Debug|x64.ActiveCfg = Debug|x64
+		{C5AD4809-FAB5-49CA-BCD7-BE523EC2F8A7}.Debug|x64.Build.0 = Debug|x64
+		{C5AD4809-FAB5-49CA-BCD7-BE523EC2F8A7}.Release|Mixed Platforms.ActiveCfg = Release|x64
+		{C5AD4809-FAB5-49CA-BCD7-BE523EC2F8A7}.Release|Mixed Platforms.Build.0 = Release|x64
+		{C5AD4809-FAB5-49CA-BCD7-BE523EC2F8A7}.Release|Win32.ActiveCfg = Release|x64
+		{C5AD4809-FAB5-49CA-BCD7-BE523EC2F8A7}.Release|x64.ActiveCfg = Release|x64
+		{C5AD4809-FAB5-49CA-BCD7-BE523EC2F8A7}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
