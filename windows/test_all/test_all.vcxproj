@@ -47,14 +47,14 @@
       <SubSystem>Console</SubSystem>
     </Link>
     <ClCompile>
-      <DisableSpecificWarnings>4005;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4819;4005;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <AdditionalIncludeDirectories>$(ProjectDir)\..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <CudaCompile>
       <TargetMachinePlatform>64</TargetMachinePlatform>
       <CodeGeneration>$(CudaArchitecture)</CodeGeneration>
       <GenerateLineInfo>true</GenerateLineInfo>
-      <AdditionalOptions>-Xcudafe "--diag_suppress=exception_spec_override_incompat --diag_suppress=useless_using_declaration --diag_suppress=field_without_dll_interface --diag_suppress=boolean_controlling_expr_is_constant" -D_SCL_SECURE_NO_WARNINGS -DGFLAGS_DLL_DECL= </AdditionalOptions>
+      <AdditionalOptions>-Xcompiler "/wd 4819" -Xcudafe "--diag_suppress=exception_spec_override_incompat --diag_suppress=useless_using_declaration --diag_suppress=field_without_dll_interface --diag_suppress=boolean_controlling_expr_is_constant" -D_SCL_SECURE_NO_WARNINGS -DGFLAGS_DLL_DECL= </AdditionalOptions>
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -63,13 +63,13 @@
       <SubSystem>Console</SubSystem>
     </Link>
     <ClCompile>
-      <DisableSpecificWarnings>4005;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4819;4005;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <AdditionalIncludeDirectories>$(ProjectDir)\..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <CudaCompile>
       <TargetMachinePlatform>64</TargetMachinePlatform>
       <CodeGeneration>$(CudaArchitecture)</CodeGeneration>
-      <AdditionalOptions>-Xcudafe "--diag_suppress=exception_spec_override_incompat --diag_suppress=useless_using_declaration --diag_suppress=field_without_dll_interface --diag_suppress=boolean_controlling_expr_is_constant" -D_SCL_SECURE_NO_WARNINGS -DGFLAGS_DLL_DECL= </AdditionalOptions>
+      <AdditionalOptions>-Xcompiler "/wd 4819" -Xcudafe "--diag_suppress=exception_spec_override_incompat --diag_suppress=useless_using_declaration --diag_suppress=field_without_dll_interface --diag_suppress=boolean_controlling_expr_is_constant" -D_SCL_SECURE_NO_WARNINGS -DGFLAGS_DLL_DECL= </AdditionalOptions>
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
