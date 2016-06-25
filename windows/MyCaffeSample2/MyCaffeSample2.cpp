@@ -43,5 +43,28 @@ int main(int argc, char** argv) {
 	LOG(INFO) << "Solve start.";
 	solver->Solve();
 
+	// パラメータ表示
+	const auto hidden1_blobs = net->layer_by_name("hidden1")->blobs();
+	const auto hidden1_weight = hidden1_blobs[0]->cpu_data();
+	const auto hidden1_bias = hidden1_blobs[1]->cpu_data();
+	LOG(INFO) << "hidden1_weight shape = ";
+	for (auto v : hidden1_blobs[0]->shape())
+		LOG(INFO) << v;
+	LOG(INFO) << "hidden1_weight = " << hidden1_weight[0] << ", " << hidden1_weight[1];
+	LOG(INFO) << "hidden1_bias shape = ";
+	for (auto v : hidden1_blobs[1]->shape())
+		LOG(INFO) << v;
+	LOG(INFO) << "hidden1_bias = " << hidden1_bias[0];
+
+	const auto hidden2_blobs = net->layer_by_name("hidden2")->blobs();
+	const auto hidden2_weight = hidden2_blobs[0]->cpu_data();
+	const auto hidden2_bias = hidden2_blobs[1]->cpu_data();
+	for (auto v : hidden2_blobs[0]->shape())
+		LOG(INFO) << v;
+	LOG(INFO) << "hidden2_weight = " << hidden2_weight[0] << ", " << hidden2_weight[1];
+	for (auto v : hidden2_blobs[1]->shape())
+		LOG(INFO) << v;
+	LOG(INFO) << "hidden2_bias = " << hidden2_bias[0] << ", " << hidden2_bias[1];
+
 	return 0;
 }
