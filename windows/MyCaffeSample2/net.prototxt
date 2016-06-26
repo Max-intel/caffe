@@ -5,7 +5,7 @@ layer {
   top: "input"
   top: "label"
   memory_data_param {
-    batch_size: 8
+    batch_size: 10
     channels: 2
     height: 1
     width: 1
@@ -17,7 +17,7 @@ layer {
   bottom: "input"
   top: "hidden1"
   inner_product_param {
-    num_output: 1
+    num_output: 3
     weight_filler {
       type: "xavier"
     }
@@ -27,7 +27,7 @@ layer {
   }
 }
 layer {
-  name: "relu"
+  name: "relu1"
   type: "ReLU"
   bottom: "hidden1"
   top: "hidden1"
@@ -53,4 +53,16 @@ layer {
   bottom: "hidden2"
   bottom: "label"
   top: "loss"
+  include {
+    phase: TRAIN
+  }
+}
+layer {
+  name: "prob"
+  type: "Softmax"
+  bottom: "hidden2"
+  top: "prob"
+  include {
+    phase: TEST
+  }
 }
