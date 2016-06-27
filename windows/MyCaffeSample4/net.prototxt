@@ -1,0 +1,72 @@
+name: "MultilayerPerceptrons"
+layer {
+  name: "input"
+  type: "MemoryData"
+  top: "input"
+  top: "label"
+  memory_data_param {
+    batch_size: 10
+    channels: 2
+    height: 1
+    width: 1
+  }
+}
+layer {
+  name: "hidden1"
+  type: "InnerProduct"
+  bottom: "input"
+  top: "hidden1"
+  inner_product_param {
+    num_output: 3
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
+  name: "relu1"
+  type: "ReLU"
+  bottom: "hidden1"
+  top: "hidden1"
+}
+layer {
+  name: "hidden2"
+  type: "InnerProduct"
+  bottom: "hidden1"
+  top: "hidden2"
+  inner_product_param {
+    num_output: 2
+	bias_term: false
+    weight_filler {
+      type: "xavier"
+    }
+  }
+}
+layer {
+  name: "bias"
+  type: "Bias"
+  bottom: "hidden2"
+  top: "output"
+}
+layer {
+  name: "loss"
+  type: "SoftmaxWithLoss"
+  bottom: "output"
+  bottom: "label"
+  top: "loss"
+  include {
+    phase: TRAIN
+  }
+}
+layer {
+  name: "prob"
+  type: "Softmax"
+  bottom: "output"
+  top: "prob"
+  include {
+    phase: TEST
+  }
+}
