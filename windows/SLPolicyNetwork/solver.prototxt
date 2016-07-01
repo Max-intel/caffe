@@ -1,0 +1,10 @@
+net: "sl_policy_network.prototxt"
+type: "SGD"
+base_lr: 0.01
+lr_policy: "step"
+gamma: 0.5
+stepsize: 8000000
+max_iter: 100
+display: 100
+test_iter: 10
+test_interval: 100

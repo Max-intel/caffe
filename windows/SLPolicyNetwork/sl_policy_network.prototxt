@@ -1,0 +1,359 @@
+name: "SLPolicyNetwork"
+layer {
+  name: "input"
+  type: "MemoryData"
+  top: "input"
+  top: "label"
+  include {
+    phase: TRAIN
+  }
+  memory_data_param {
+    batch_size: 16
+    channels: 4
+    height: 19
+    width: 19
+  }
+}
+layer {
+  name: "input"
+  type: "MemoryData"
+  top: "input"
+  top: "label"
+  include {
+    phase: TEST
+  }
+  memory_data_param {
+    batch_size: 16
+    channels: 4
+    height: 19
+    width: 19
+  }
+}
+layer {
+  name: "layer1"
+  type: "Convolution"
+  bottom: "input"
+  top: "layer1"
+  convolution_param {
+    num_output: 192
+    kernel_size: 5
+    pad: 2
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
+  name: "relu1"
+  type: "ReLU"
+  bottom: "layer1"
+  top: "layer1"
+}
+layer {
+  name: "layer2"
+  type: "Convolution"
+  bottom: "layer1"
+  top: "layer2"
+  convolution_param {
+    num_output: 192
+    kernel_size: 3
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
+  name: "relu2"
+  type: "ReLU"
+  bottom: "layer2"
+  top: "layer2"
+}
+layer {
+  name: "layer3"
+  type: "Convolution"
+  bottom: "layer2"
+  top: "layer3"
+  convolution_param {
+    num_output: 192
+    kernel_size: 3
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
+  name: "relu3"
+  type: "ReLU"
+  bottom: "layer3"
+  top: "layer3"
+}
+layer {
+  name: "layer4"
+  type: "Convolution"
+  bottom: "layer3"
+  top: "layer4"
+  convolution_param {
+    num_output: 192
+    kernel_size: 3
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
+  name: "relu4"
+  type: "ReLU"
+  bottom: "layer4"
+  top: "layer4"
+}
+layer {
+  name: "layer5"
+  type: "Convolution"
+  bottom: "layer4"
+  top: "layer5"
+  convolution_param {
+    num_output: 192
+    kernel_size: 3
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
+  name: "relu5"
+  type: "ReLU"
+  bottom: "layer5"
+  top: "layer5"
+}
+layer {
+  name: "layer6"
+  type: "Convolution"
+  bottom: "layer5"
+  top: "layer6"
+  convolution_param {
+    num_output: 192
+    kernel_size: 3
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
+  name: "relu6"
+  type: "ReLU"
+  bottom: "layer6"
+  top: "layer6"
+}
+layer {
+  name: "layer7"
+  type: "Convolution"
+  bottom: "layer6"
+  top: "layer7"
+  convolution_param {
+    num_output: 192
+    kernel_size: 3
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
+  name: "relu7"
+  type: "ReLU"
+  bottom: "layer7"
+  top: "layer7"
+}
+layer {
+  name: "layer8"
+  type: "Convolution"
+  bottom: "layer7"
+  top: "layer8"
+  convolution_param {
+    num_output: 192
+    kernel_size: 3
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
+  name: "relu8"
+  type: "ReLU"
+  bottom: "layer8"
+  top: "layer8"
+}
+layer {
+  name: "layer9"
+  type: "Convolution"
+  bottom: "layer8"
+  top: "layer9"
+  convolution_param {
+    num_output: 192
+    kernel_size: 3
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
+  name: "relu9"
+  type: "ReLU"
+  bottom: "layer9"
+  top: "layer9"
+}
+layer {
+  name: "layer10"
+  type: "Convolution"
+  bottom: "layer9"
+  top: "layer10"
+  convolution_param {
+    num_output: 192
+    kernel_size: 3
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
+  name: "relu10"
+  type: "ReLU"
+  bottom: "layer10"
+  top: "layer10"
+}
+layer {
+  name: "layer11"
+  type: "Convolution"
+  bottom: "layer10"
+  top: "layer11"
+  convolution_param {
+    num_output: 192
+    kernel_size: 3
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
+  name: "relu11"
+  type: "ReLU"
+  bottom: "layer11"
+  top: "layer11"
+}
+layer {
+  name: "layer12"
+  type: "Convolution"
+  bottom: "layer11"
+  top: "layer12"
+  convolution_param {
+    num_output: 192
+    kernel_size: 3
+    pad: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
+  name: "relu12"
+  type: "ReLU"
+  bottom: "layer12"
+  top: "layer12"
+}
+layer {
+  name: "layer13"
+  type: "Convolution"
+  bottom: "layer12"
+  top: "layer13"
+  convolution_param {
+    num_output: 1
+    kernel_size: 1
+    pad: 0
+    bias_term: false
+    weight_filler {
+      type: "xavier"
+    }
+  }
+}
+layer {
+  name: "bias13"
+  type: "Bias"
+  bottom: "layer13"
+  top: "layer13"
+}
+layer {
+  name: "reshape"
+  type: "Reshape"
+  bottom: "layer13"
+  top: "output"
+  reshape_param {
+    shape {
+      dim: 0
+      dim: -1
+      dim: 1
+      dim: 1
+    }
+  }
+}
+layer {
+  name: "loss"
+  type: "SoftmaxWithLoss"
+  bottom: "output"
+  bottom: "label"
+  top: "loss"
+}
+layer {
+  name: "accuracy"
+  type: "Accuracy"
+  bottom: "output"
+  bottom: "label"
+  top: "accuracy"
+  include {
+    phase: TEST
+  }
+}
